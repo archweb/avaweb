@@ -78,3 +78,30 @@ jQuery(document).ready(function() {
     })();
 
 });
+
+jQuery(document).ready(function($){
+
+    $(window).scroll(function() {
+
+        console.log("asdf");
+
+        if ($(window).scrollTop() > 100 ){
+
+            $('.top-header').addClass('shows');
+
+        } else {
+
+            $('.top-header').removeClass('shows');
+
+        };
+    });
+
+});
+
+jQuery('.scroll').on('click', function(e){
+    e.preventDefault()
+
+    jQuery('html, body').animate({
+        scrollTop : jQuery(this.hash).offset().top
+    }, 1500);
+});
